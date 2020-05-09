@@ -5,10 +5,10 @@ const passport = require('passport');
 const keys = require('./config/keys');
 const authRoutes = require('./routes/authRoutes');
  
-require('./models/user');
+require('./models/user'); 
 require('./services/passport');
 
-mongoose.connect(keys.mongoURI, {useNewUrlParser: true});
+mongoose.connect(keys.mongoURI,  { useNewUrlParser: true });
 const app = express();
 
 app.use(
@@ -22,5 +22,5 @@ app.use(passport.session());
 
 authRoutes(app);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT);
