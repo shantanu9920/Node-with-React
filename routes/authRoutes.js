@@ -1,5 +1,5 @@
 const passport = require('passport');
-// const path = require('path');
+const path = require('path');
 
 module.exports = app => {
      
@@ -25,6 +25,6 @@ module.exports = app => {
     });
 
     app.get('/', (req, res) => {
-        res.sendFile('start.html');
+        res.sendFile(path.join(__dirname+'/start.html'));
     });
 };
