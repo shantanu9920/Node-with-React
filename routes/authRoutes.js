@@ -25,6 +25,8 @@ module.exports = app => {
     });
 
     app.get('/', (req, res) => {
-        res.sendFile(path.join(__dirname+'/start.html'));
+        res.sendFile('verify.html', {
+            root: path.join(__dirname, './')
+        });
     });
 };
